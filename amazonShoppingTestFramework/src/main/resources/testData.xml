@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Amazon Tests" verbose="10">
+<!--Test Suite-->
+<test name="PurchaseTest" preserve-order="true">
+    <!--Test Data-->
+    <parameter name="query" value="65-inch TV" />
+    <parameter name="email" value="s_anda_2001@yahoo.com"/>
+    <parameter name="password" value="Amazon1!"/>
+    <classes>
+        <class name="tests.PurchaseTest" />
+    </classes>
+</test>
+</suite>
