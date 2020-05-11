@@ -11,6 +11,7 @@ import testBase.BaseTestClass;
 public class PurchaseTest extends BaseTestClass {
 
     private static final String RESULT_TEXT = "inch";
+    private static final String ZIPCODE = "10024";
 
     SignInSignOutPage signInSignOut = new SignInSignOutPage(driver);
     SearchPage globalSearch = new SearchPage(driver);
@@ -30,6 +31,9 @@ public class PurchaseTest extends BaseTestClass {
         // Step: search by given query (65-ich TV)
         // query value read from .xml file and passed through @Parameter
         globalSearch.searchByQuery(query);
+        
+        // Step: change delivery to US zipcode
+        globalSearch.changeDeliveryZipCodeToUS(ZIPCODE);
 
         // Verify: Search results are visible after search by keyword
         Assert.assertTrue(globalSearch.getNumberOfResults() > 0, "No search results are displayed after search by keyword" + query);
