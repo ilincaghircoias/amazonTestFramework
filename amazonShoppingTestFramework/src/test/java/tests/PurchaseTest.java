@@ -22,7 +22,7 @@ public class PurchaseTest extends BaseTestClass {
 
         // Step: Sign in with existing account
         signInSignOut.waitFor();
-        signInSignOut.signInFlow(email, password);
+        signInSignOut.clickSkipSignIn();
 
         // Step: wait for search page to load
         globalSearch.waitFor();
