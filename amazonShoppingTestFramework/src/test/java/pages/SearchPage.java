@@ -26,7 +26,28 @@ public class SearchPage extends PageBase {
 
     @AndroidFindBy(id = "rs_search_src_text")
     protected WebElement searchBar;
+    
+    @AndroidFindBy(id = "glow_subnav_ingress")
+    protected WebElement deliverTo;
 
+    @AndroidFindBy(id = "loc_ux_pin_code_button")
+    protected WebElement deliverToUS;
+
+    @AndroidFindBy(id = "loc_ux_pin_code_text_pt1")
+    protected WebElement usZipcode;
+
+    @AndroidFindBy(id = "loc_ux_update_pin_code")
+    protected WebElement updateZipcode;
+    
+    public void changeDeliveryZipCodeToUS(String zipCode) {
+       if (waitForElementToBeVisible(deliverTo)) {
+        clickElementAfterWait(deliverTo);
+        clickElementAfterWait(deliverToUS);
+        clickElementAfterWait(usZipcode);
+        typeText(usZipcode, zipCode);
+        clickElementAfterWait(updateZipcode);
+        }
+    }
 
     public boolean areSearchResultsVisible() {
         return waitForElementToBeVisible(searchResults);
