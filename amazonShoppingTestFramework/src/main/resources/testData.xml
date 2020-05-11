@@ -5,8 +5,6 @@
 <test name="PurchaseTest" preserve-order="true">
     <!--Test Data-->
     <parameter name="query" value="65-inch TV" />
-    <parameter name="email" value="s_anda_2001@yahoo.com"/>
-    <parameter name="password" value="Amazon1!"/>
     <classes>
         <class name="tests.PurchaseTest" />
     </classes>
