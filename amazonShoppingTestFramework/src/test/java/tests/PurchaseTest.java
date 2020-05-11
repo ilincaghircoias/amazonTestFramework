@@ -18,8 +18,8 @@ public class PurchaseTest extends BaseTestClass {
     PageBase pageBase = new PageBase(driver);
 
     @Test
-    @Parameters({"query", "email", "password"})
-    public void purchaseTest(String query, String email, String password) throws InterruptedException {
+    @Parameters("query")
+    public void purchaseTest(String query) throws InterruptedException {
 
         // Step: Skip sign in
         signInSignOut.waitFor();
