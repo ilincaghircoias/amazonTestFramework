@@ -20,7 +20,7 @@ public class PurchaseTest extends BaseTestClass {
     @Parameters({"query", "email", "password"})
     public void purchaseTest(String query, String email, String password) throws InterruptedException {
 
-        // Step: Sign in with existing account
+        // Step: Skip sign in
         signInSignOut.waitFor();
         signInSignOut.clickSkipSignIn();
 
@@ -45,9 +45,5 @@ public class PurchaseTest extends BaseTestClass {
 
         // Step: Validate title
         Assert.assertTrue(globalSearch.verifyText(resultsText), "Title not validated");
-
-        // Sign out
-        pageBase.goBackFromAndroidXTimes(1);
-        signInSignOut.signOut();
     }
 }
