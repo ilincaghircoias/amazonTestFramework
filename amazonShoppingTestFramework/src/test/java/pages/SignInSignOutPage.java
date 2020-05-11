@@ -44,6 +44,13 @@ public class SignInSignOutPage extends PageBase {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Not now\")")
     protected WebElement notNow;
+    
+    @AndroidFindBy(id = "skip_sign_in_button")
+    protected WebElement skipSignInButton;
+    
+    public void clickSkipSignIn() {
+        clickElementAfterWait(skipSignInButton);
+    }
 
     public void enterEmailAddress(String email) {
         clickElementAfterWait(emailAddressField);
