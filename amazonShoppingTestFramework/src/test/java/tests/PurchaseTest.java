@@ -36,10 +36,8 @@ public class PurchaseTest extends BaseTestClass {
 
         // Verify: Search results are visible
         Assert.assertTrue(globalSearch.areSearchResultsVisible(), "Search results not visible after search by keyword" + query);
-
+        
         // Step: Scroll to one of the results and click
-        globalSearch.scrollToProductAndClick(RESULT_TEXT);
-
         // Step: Get title of product after click
         String resultsText =  globalSearch.getResultTitle(RESULT_TEXT);
 
